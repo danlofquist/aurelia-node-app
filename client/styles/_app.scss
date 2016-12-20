@@ -1,0 +1,27 @@
+// define your owm styles here
+
+.app {
+    @extend .container;
+
+    h1 {
+        color: darkmagenta;
+    }
+
+}
+
+.tech {
+    @include make-row();
+
+    .tech-items {
+        @include make-md-column(12);
+
+        li {
+            @include breakpoint(md) {
+                color: darkgoldenrod;
+                text-transform: uppercase;                
+            }            
+            
+        }
+    }
+
+}

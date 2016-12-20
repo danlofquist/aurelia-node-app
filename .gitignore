@@ -1,0 +1,10 @@
+node_modules
+.idea
+.DS_STORE
+
+# Aurelia specific
+**/app-bundle*
+**/vendor-bundle*
+
+# Ignore fonts
+/**/public/fonts/*
