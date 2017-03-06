@@ -19,8 +19,8 @@
     "source": "client/**/*.js"
   },
   "markupProcessor": {
-    "id": "none",
-    "displayName": "None",
+    "id": "maximum",
+    "displayName": "Maximum Minification",
     "fileExtension": ".html",
     "source": "client/**/*.html"
   },
@@ -73,7 +73,8 @@
     },
     "options": {
       "minify": "stage & prod",
-      "sourcemaps": "dev & stage"
+      "sourcemaps": "dev & stage",
+      "rev" : "stage & prod"
     },
     "bundles": [
       {
@@ -87,6 +88,7 @@
         "name": "vendor-bundle.js",
         "prepend": [
           "node_modules/bluebird/js/browser/bluebird.core.js",
+          "node_modules/aurelia-cli/lib/resources/scripts/configure-bluebird.js",
           "node_modules/requirejs/require.js",
           "node_modules/whatwg-fetch/fetch.js"
         ],
